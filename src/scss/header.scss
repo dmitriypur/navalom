@@ -72,9 +72,9 @@
 		top: 0;
 		left: -100%;
 		overflow-y: scroll;
-		max-width: rem(500);
+		max-width: max-content;
 		height: 100%;
-		padding: 40px 20px;
+		padding: 70px 30px 40px;
 		background: $white;
 		z-index: 500;
 		transition: left 0.5s ease;
@@ -85,7 +85,7 @@
 		.close-orange{
 			position: absolute;
 			display: block;
-			top: 25px;
+			top: 20px;
 			right: 25px;
 			width: rem(30);
 			height: rem(30);
@@ -165,6 +165,12 @@
 		height: 12px;
 		background: url(@img/arrow-down.svg) no-repeat center;
 		transform: translateY(-50%);
+
+		@media (max-width:1200px){
+			top: 5px;
+			right: 0;
+			transform: translateY(0);
+		}
 	}
 	.sub-menu{
 		position: absolute;
@@ -202,6 +208,33 @@
 				color: $orange;
 			}
 			
+		}
+
+		@media (max-width:1200px){
+			position: relative;
+			top: 20px;
+			margin-bottom: 0;
+			padding: 0 20px;
+			display: block;
+			box-shadow: none;
+			background: #f4f4f4;
+			overflow: hidden;
+			border: none;
+			max-height: 0;
+			transition: all 0.3s ease-out;
+
+			&::before{
+				display: none;
+			}
+			a{
+				margin-bottom: rem(10);
+			}
+
+			&.show{
+				max-height: 1000px;
+				transition: all 0.3s ease-in;
+				padding: 20px;
+			}
 		}
 	}
 }
@@ -455,10 +488,14 @@ p.header__address {
 .header__bottom__slide {
 	p{
 		font-family: 'ProstoOne';
-		font-size: rem(24);
-		@include adaptiveValue("font-size", 45, 24, 1400, 500);
-		line-height: rem(30);
-		@include adaptiveValue("line-height", 60, 30, 1400, 500);
+		font-size: rem(45);
+		line-height: rem(60);
+	}
+	@media (max-width:$mobile) {
+		p{
+			font-size: rem(30);
+			line-height: rem(40);
+		}
 	}
 }
 

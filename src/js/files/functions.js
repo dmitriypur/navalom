@@ -647,3 +647,23 @@ document.querySelector('.hamburger-js').addEventListener('click', e => {
 		document.querySelector("html").classList.remove('lock')
 	})
 })
+
+
+let headerMenu = document.querySelector('.header__top-menu');
+let itemParent = headerMenu.querySelectorAll('.menu-item-has-children');
+
+itemParent.forEach(elem => {
+	let child = Array.from(elem.children)
+	child.forEach(el => {
+		if (el.classList.contains('sub-menu')) {
+			// elem.classList.add('parent')
+			if (window.innerWidth < 1200) {
+				elem.addEventListener('click', function (e) {
+					e.preventDefault()
+					elem.classList.toggle('show')
+					el.classList.toggle('show')
+				});
+			}
+		}
+	})
+})

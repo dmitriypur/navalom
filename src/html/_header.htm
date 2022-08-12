@@ -1,0 +1,168 @@
+<header class="header">
+	<div class="header__container">
+		<div class="header__top">
+			<div class="hamburger__top-wrap hamburger-js">
+				<span class="hamburger__top"></span>
+			</div>
+			<div class="header__top-logo">
+				<a href="/">
+					<svg class="header-logo">
+						<use xlink:href="@img/icons/icons.svg#svg-header-logo"></use>
+					</svg>
+					<img src="@img/logo-mobile.svg" alt="" class="logo-mobile">
+				</a>
+			</div>
+			<div class="header__top-info">
+				<svg class="close">
+					<use xlink:href="@img/icons/icons.svg#svg-close"></use>
+				</svg>
+				<nav class="header__top-menu">
+					<ul class="menu__list">
+						<li class="menu__item menu-item-has-children">
+							<a href="#" class="menu__link">Прайс</a>
+							<ul class="sub-menu">
+								<li class="menu__item"><a href="#" class="menu__link">Цена на антисептик</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Цена на блок-хаус</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Цена на брус</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Цена на вагонку лиственную</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Цена на наличники и плинтусы</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Цена на доска заборную</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Цена на доску обрезную</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Цена на евровагонку / вагонку</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Цена наимитацию бруса</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Цена на половую доску</a></li>
+							</ul>
+						</li>
+						<li class="menu__item"><a href="#" class="menu__link">Доставка и оплата</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">О компании</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Закупка материалов</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="header__top-contacts">
+					<div class="contacts__item">
+						<p>Розничные продажи</p>
+						<a href="tel:78332430543" class="header__phone">+7 (8332) 43-05-43</a>
+					</div>
+					<div class="contacts__item">
+						<p>Оптовый отдел</p>
+						<a href="tel:78332477233" class="header__phone">+7 (8332) 477-233</a>
+						<a href="mailto:477-233@mail.ru" class="header__mail">477-233@mail.ru</a>
+					</div>
+					<div class="contacts__item">
+						<p class="header__address">г. Киров, Сормовская, 7</p>
+						<p>пн-пт: 9:00 - 18:00</p>
+						<p>cб: 8:30 - 14:00, вс: вых.</p>
+					</div>
+					<div class="contacts__item">
+						<button type="button" data-popup="#popup" class="btn btn-green">Заказать звонок</button>
+					</div>
+					
+				</div>
+			</div>
+			<button type="button" data-popup="#popup" class="btn btn-phone">
+				<svg class="phone-header">
+					<use xlink:href="@img/icons/icons.svg#svg-phone-header"></use>
+				</svg>
+			</button>
+		</div>
+		<div class="header__bottom">
+			<div class="header__bottom-left">
+				<div class="header__bottom-controls">
+					<div class="header__bottom-nav">
+						<span class="hamburger"></span>
+						<p>Каталог товаров</p>
+					</div>
+					<div class="header__bottom-search">
+						<form role="search" method="get" id="searchform">
+							<input type="text" name="s" id="s" placeholder="Поиск по каталогу" />
+							<input type="submit" id="searchsubmit" value="" />
+						</form>
+					</div>
+				</div>
+				<!-- Оболочка слайдера -->
+				<div class="header__bottom__slider swiper">
+					<!-- Двигающееся часть слайдера -->
+					<div class="header__bottom__wrapper swiper-wrapper">
+						<!-- Слайд -->
+						<div class="header__bottom__slide swiper-slide">
+							<p>Закажи по телефону - рассчитайся на месте</p>
+						</div>
+						<div class="header__bottom__slide swiper-slide">
+							<p>Закажи по телефону - рассчитайся на месте</p>
+						</div>
+						<div class="header__bottom__slide swiper-slide">
+							<p>Закажи по телефону - рассчитайся на месте</p>
+						</div>
+					</div>
+					<!-- Если нужна пагинация -->
+					<div class="swiper-pagination"></div>
+					<!-- Если нужна навигация (влево/вправо) -->
+					<button type="button" class="swiper-button-prev swiper-button">
+						<svg class="header-logo">
+							<use xlink:href="@img/icons/icons.svg#svg-arrow-slider-left"></use>
+						</svg>
+					</button>
+					<button type="button" class="swiper-button-next swiper-button">
+						<svg class="header-logo">
+							<use xlink:href="@img/icons/icons.svg#svg-arrow-slider-right"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="header__bottom-catalog" data-da=".header__bottom, 1200, 0">
+				<ul class="catalog__list">
+					<li class="catalog__item">
+						<img src="@img/catalog-img.png" alt="">
+						<a href="#">Антисептик</a>
+					</li>
+					<li class="catalog__item">
+						<img src="@img/catalog-img.png" alt="">
+						<a href="#">Блок-хаус</a>
+					</li>
+					<li class="catalog__item">
+						<img src="@img/catalog-img.png" alt="">
+						<a href="#">Брус</a>
+					</li>
+					<li class="catalog__item">
+						<img src="@img/catalog-img.png" alt="">
+						<a href="#">Вагонка лиственная</a>
+					</li>
+					<li class="catalog__item">
+						<img src="@img/catalog-img.png" alt="">
+						<a href="#">Наличники и плинтусы</a>
+					</li>
+					<li class="catalog__item">
+						<img src="@img/catalog-img.png" alt="">
+						<a href="#">Доска заборная</a>
+					</li>
+					<li class="catalog__item">
+						<img src="@img/catalog-img.png" alt="">
+						<a href="#">Доска обрезная</a>
+					</li>
+					<li class="catalog__item">
+						<img src="@img/catalog-img.png" alt="">
+						<a href="#">Евровагонка / вагонка</a>
+					</li>
+					<li class="catalog__item">
+						<img src="@img/catalog-img.png" alt="">
+						<a href="#">Имитация бруса</a>
+					</li>
+					<li class="catalog__item">
+						<img src="@img/catalog-img.png" alt="">
+						<a href="#">Половая доска</a>
+					</li>
+					<li class="catalog__item">
+						<img src="@img/catalog-img.png" alt="">
+						<a href="#">Строганная доска</a>
+					</li>
+					<li class="catalog__item">
+						<img src="@img/catalog-img.png" alt="">
+						<a href="#">Фанера, OSB-3, ДВП</a>
+					</li>
+				</ul>
+			</div>
+			<img src="@img/hero-img.png" alt="">
+		</div>
+	</div>
+</header>

@@ -1,0 +1,16 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+@mixin btn($color, $percent){
+
+    display: inline-block;
+    padding: rem(15);
+    background: $color;
+    color: $white;
+    font-size: rem(18);
+    font-weight: 700;
+    transition: background 0.3s ease;
+
+    &:hover{
+        background: lighten($color, $percent);
+    }
+}

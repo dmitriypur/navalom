@@ -1,0 +1,150 @@
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+.popup-show body::after {
+	opacity: 1;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 10px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+}
+.popup_show {
+	z-index: 150;
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
+}
+.popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup__content {
+	visibility: hidden;
+	position: relative;
+	display: flex;
+	width: 100%;
+	transform: scale(0);
+	transition: transform 0.3s ease 0s;
+	background-color: #eee;
+	width: 100%;
+	max-width: 1216px;
+	.lock & {
+		visibility: visible;
+	}
+}
+.popup__form{
+	padding: 40px 30px;
+	background: $green;
+	color: $white;
+	flex: auto;
+
+	span{
+		font-family: 'ProstoOne';
+		display: block;
+		font-size: rem(35);
+		margin-bottom: rem(15);
+	}
+	p{
+		font-size: rem(20);
+	}
+	form{
+		margin-top: rem(40);
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		max-width: rem(600);
+		gap: 25px 20px;
+	}
+	.form-control{
+		width: calc(100% / 2 - 20px);
+
+		p{
+			font-size: rem(14);
+			line-height: rem(20);
+		}
+	}
+	input{
+		width: 100%;
+		padding: 15px 25px;
+		font-size: rem(18);
+		outline: none;
+
+		&::placeholder{
+			font-size: rem(18);
+			color: $grey;
+		}
+	}
+	input[type=submit]{
+		background: $orange;
+		color: $white;
+		font-weight: 700;
+		cursor: pointer;
+		transition: background 0.3s ease;
+
+		&:hover{
+			background: lighten($orange, 7%);
+		}
+	}
+}
+.popup__phones{
+	width: rem(266);
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: rem(20);
+
+	p{
+		margin-bottom: rem(7);
+	}
+	a{
+		font-weight: 700;
+		margin-bottom: rem(50);
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.popup__close{
+	position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -50px;
+    background: none;
+    top: 0;
+
+	 svg{
+		width: 100%;
+		height: 100%;
+	 }
+}

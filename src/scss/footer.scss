@@ -1,0 +1,209 @@
+//====================================================================================================
+.footer {
+   background: $green;
+   color: $white;
+   padding: 95px 0;
+
+   @media (max-width: $tablet) {
+      padding: 50px 0;
+   }
+}
+.footer__container {
+}
+.footer__top {
+   display: flex;
+   margin-bottom: rem(50);
+
+   @media (max-width: $tablet) {
+      flex-direction: column;
+   }
+}
+.footer__top-logo {
+   width: auto;
+   height: auto;
+   margin-right: rem(20);
+   @include adaptiveValue("margin-right", 135, 20, 1400, 991);
+
+   svg{
+      width: rem(212);
+      height: rem(115);
+   }
+
+   @media (max-width: $tablet) {
+      display: none;
+   }
+}
+.footer__top-menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: start;
+   width: 100%;
+
+   &>div,&>ul{
+      margin-left: 20px;
+      margin-bottom: 40px;
+   }
+
+   .phone {
+      a{
+         display: block;
+         font-weight: 600;
+         font-size: rem(18);
+         margin-bottom: 15px;
+      }
+      a.email-address{
+         text-decoration: underline;
+         margin-top: 35px;
+         margin-bottom: 35px;
+      }
+      svg{
+         width: rem(40);
+         height: rem(40);
+      }
+   }
+   .address {
+      p{
+         font-size: rem(18);
+         line-height: rem(24);
+      }
+   }
+   .address__text {
+      font-weight: 600;
+      font-size: rem(18);
+      margin-bottom: 15px;
+   }
+   .footer__menu {
+      li{
+         margin-bottom: 24px;
+      }
+      a{
+         font-size: rem(18);
+      }
+   }
+   .btn-white{
+      @include btn($white, 15%);
+      padding: 15px 25px;
+      color: $text;
+   }
+
+   .vk-black{
+      display: none;
+      width: rem(39);
+      height: rem(39);
+      svg{
+         width: 100%;
+         height: 100%;
+      }
+   }
+   @media (max-width: 1200px) {
+      flex-wrap: wrap;
+   }
+   @media (max-width: $tablet) {
+      flex-direction: column;
+
+      &>div,&>ul{
+         margin-left: 0;
+         margin-bottom: 40px;
+      }
+      .footer__menu{
+         order: 0;
+      }
+      .address{
+         order: 1;
+         background: $white;
+         width: 100%;
+         margin-bottom: 0;
+         padding: 30px 20px 15px;
+         color: $text;
+      }
+      .phone{
+         order: 2;
+         background: $white;
+         width: 100%;
+         margin-bottom: 0;
+         padding: 30px 20px;
+         color: $text;
+         &>a.vk{
+            display: none;
+         }
+         a.email-address{
+            margin-bottom: 0;
+         }
+      }
+      .callback__btn{
+         order: 3;
+         width: 100%;
+         margin-bottom: 0;
+         margin-top: rem(30);
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+
+         .vk-black{
+            display: block;
+         }
+      }
+      .btn-white{
+         padding: 10px 20px;
+         font-size: rem(16);
+      }
+   }
+}
+
+.footer__bottom {
+   display: flex;
+}
+.footer__bottom-copiright {
+   max-width: rem(215);
+   margin-right: rem(20);
+   font-size: rem(14);
+   @include adaptiveValue("margin-right", 135, 20, 1400, 991);
+
+   a{
+      text-decoration: underline;
+      display: block;
+      margin-bottom: rem(42);
+   }
+
+   p{
+      line-height: rem(18);
+      margin-bottom: rem(10);
+
+      a{
+         display: unset;
+         margin-bottom: 0;
+      }
+   }
+}
+.footer__bottom-catalog {
+   width: 100%;
+
+   .catalog__list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(15);
+   }
+   .catalog__item {
+      a{
+         display: inline-block;
+         font-size: rem(20);
+         padding: 15px 25px;
+         border: 1px solid rgba(255, 255, 255, 0.2);
+         background: rgba(255, 255, 255, 0.1);
+         transition: background 0.3s ease;
+   
+         &:hover{
+            background: rgba(255, 255, 255, 0.2);
+         }
+      }
+   }
+   @media (max-width: $tablet) {
+      margin-bottom: rem(50);
+      a{
+         font-size: rem(18);
+      }
+   }
+}
+
+//====================================================================================================

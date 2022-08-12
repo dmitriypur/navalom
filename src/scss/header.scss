@@ -63,6 +63,9 @@
 }
 .header__top-info {
 	width: 100%;
+	.close-orange{
+		display: none;
+	}
 
 	@media (max-width: 1200px) {
 		position: fixed;
@@ -79,8 +82,9 @@
 		&.show{
 			left: 0;
 		}
-		.close{
+		.close-orange{
 			position: absolute;
+			display: block;
 			top: 25px;
 			right: 25px;
 			width: rem(30);

@@ -667,3 +667,7 @@ itemParent.forEach(elem => {
 		}
 	})
 })
+
+document.querySelector('.header__bottom-nav').addEventListener('click', event => {
+	document.querySelector('.header__bottom-catalog').classList.toggle('show');
+})

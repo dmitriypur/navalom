@@ -512,8 +512,17 @@ p.header__address {
 	position: absolute;
 	top: 80px;
 	left: 0;
-	display: none;
+	box-shadow: 0px 10px 10px rgba(8, 57, 10, 0.25);
+	max-width: 0;
+	opacity: 0;
+	transition: all 0.3s ease;
 	z-index: 100;
+	overflow: hidden;
+
+	&.show{
+		max-width: 100%;
+		opacity: 1;
+	}
 
 	.catalog__list{
 		background: $white;
@@ -547,6 +556,7 @@ p.header__address {
 		position: relative;
 		top: 0;
 		margin-left: rem(20);
+		box-shadow: none;
 		z-index: 100;
 		scrollbar-color: #CFCCCF $grey;
 		scrollbar-width: auto;

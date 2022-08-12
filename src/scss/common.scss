@@ -14,3 +14,21 @@
         background: lighten($color, $percent);
     }
 }
+
+.section__title{
+    color: $title;
+    font-family: 'ProstoOne';
+    font-size: rem(50);
+    margin-bottom: rem(55);
+
+    @media (max-width: $mobile) {
+        font-size: rem(30);
+    }
+}
+
+.orange-text {
+    color: $orange;
+}
+.grey-text{
+    color: $grey;
+}

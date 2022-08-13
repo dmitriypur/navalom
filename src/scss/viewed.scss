@@ -85,6 +85,7 @@
 .btn-card {
    @include btn($green, 1%);
    width: 100%;
+   text-align: center;
    &:hover{
       background: $orange;
    }

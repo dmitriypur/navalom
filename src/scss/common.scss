@@ -32,3 +32,39 @@
 .grey-text{
     color: $grey;
 }
+.text__blure{
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(3px);
+    color: $text;
+    position: relative;
+    font-size: rem(22);
+    line-height: rem(35);
+
+    p{
+        margin-bottom: rem(40);
+    }
+}
+.text__brown{
+    background: $title;
+    color: $white;
+    position: relative;
+    padding: 50px;
+
+    h2{
+        font-size: rem(40);
+        font-family: 'ProstoOne';
+    }
+    p{
+        font-size: rem(22);
+    }
+    &-list{
+        margin-left: 20px;
+    }
+    &-item{
+        font-size: rem(22);
+        font-family: 'ProstoOne';
+        margin-bottom: rem(25);
+        list-style: square outside;
+        padding-left: 10px;
+    }
+}

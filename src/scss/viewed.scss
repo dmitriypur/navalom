@@ -3,21 +3,30 @@
 }
 .viewed__container {
    position: relative;
-   overflow: hidden;
-}
-.viewed__slider {
+   height: 100%;
 
    .swiper-button{
       background: green;
-      top: 210px;
-      right: 181px;
+      top: 240px;
+      right: 0;
+      width: rem(65);
    }
    .swiper-button-prev {
-      right: 245px;
+      left: 0;
    }
    .swiper-button-next {
       
    }
+}
+.viewed-inner{
+   position: relative;
+   height: auto;
+   // width: 1865px;
+   @include adaptiveValue("width", 1865, 500, 1430, 320);
+   overflow: hidden;
+}
+.viewed__slider {
+   
 }
 .viewed__wrapper {
 }
@@ -29,6 +38,7 @@
 }
 .viewed__card {
    width: 100%;
+   background: $white;
    img{
       margin-bottom: rem(35);
       width: 100%;
@@ -39,6 +49,10 @@
    font-size: rem(25);
    font-weight: 500;
    margin-bottom: rem(30);
+
+   @media (max-width: $mobile) {
+      font-size: rem(18);
+   }
 }
 .viewed__card-price {
    display: flex;
@@ -54,16 +68,37 @@
    &.orange-text{
       font-weight: 700;
    }
+
+   @media (max-width: $mobile) {
+      font-size: rem(22);
+      margin-right: rem(15);
+   }
 }
 
 .viewed__card-text {
    font-size: rem(14);
+   @media (max-width: $mobile) {
+      font-size: rem(12);
+   }
 }
-.btn {
+
+.btn-card {
+   @include btn($green, 1%);
    width: 100%;
-}
-.btn-green {
    &:hover{
       background: $orange;
+   }
+}
+
+@media (max-width: $mobile) {
+   .swiper-scrollbar {
+      height: 5px;
+      background: #CFCCCF;
+      margin-top: rem(15);
+   }
+   
+   .swiper-scrollbar-drag {
+      height: 100%;
+      background: $grey;
    }
 }

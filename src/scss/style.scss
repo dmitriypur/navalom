@@ -134,10 +134,13 @@ body {
 @import "common";
 
 // Подключение стилей отдельных блоков
+
 @import "header";
+
 @import "benefits";
-@import "home-catalog";
 @import "viewed";
+@import "home-catalog";
+
 @import "footer";
 
 // Подключение стилей отдельных страниц

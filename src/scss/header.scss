@@ -552,6 +552,8 @@ p.header__address {
 
 	@media (max-width:1200px) {
 		display: block;
+		max-width: 100%;
+		opacity: 1;
 		overflow-x: scroll;
 		position: relative;
 		top: 0;

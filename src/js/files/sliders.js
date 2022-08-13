@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -47,14 +47,14 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
+			
 			// Эффекты
 			effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+			
 
 			// Пагинация
 
@@ -112,7 +112,7 @@ function initSliders() {
 		new Swiper('.swiper-viewed', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination, Autoplay],
+			modules: [Navigation, Pagination, Autoplay, Scrollbar],
 
 			observer: true,
 			observeParents: true,
@@ -127,14 +127,14 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
+			
 			// Эффекты
 			effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+			
 
 			// Пагинация
 			/*
@@ -145,12 +145,12 @@ function initSliders() {
 			*/
 
 			// Скроллбар
-			/*
+			
 			scrollbar: {
 				el: '.swiper-scrollbar',
-				draggable: true,
+				draggable: false,
 			},
-			*/
+			
 
 			// Кнопки "влево/вправо"
 			navigation: {
@@ -161,22 +161,22 @@ function initSliders() {
 			// Брейкпоинты
 			
 			breakpoints: {
-				320: {
-					slidesPerView: 1.2,
-					autoHeight: true,
+				200: {
+					slidesPerView: 2,
+					// autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2.2,
+					slidesPerView: 3,
 					spaceBetween: 20,
 				},
 				992: {
-					slidesPerView: 2.5,
+					slidesPerView: 4,
 					spaceBetween: 20,
 				},
-				1268: {
-					slidesPerView: 3.5,
-					spaceBetween: 25,
-				},
+				// 1200: {
+				// 	slidesPerView: 4,
+				// 	spaceBetween: 25,
+				// },
 			},
 			
 			// События

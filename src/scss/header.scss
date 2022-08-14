@@ -90,6 +90,9 @@
 			height: rem(30);
 		}
 	}
+	@media (max-width: 400px){
+		padding: 70px 20px 30px;
+	}
 }
 .header__top-menu {
 	width: 100%;
@@ -243,6 +246,9 @@
 				padding: 30px 20px;
 				margin-bottom: rem(20);
 			}
+		}
+		@media (max-width: 400px) {
+			width: 100%;
 		}
 	}
 }

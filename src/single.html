@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Страница товара"
+})
+<body>
+	<div class="wrapper">
+		<div class="top__info">
+			<p>Закажи пиломатериал по телефону сейчас, а плати при получении! Звони: +7 (8332) 43-05-43</p>
+		</div>
+		@@include('html/_header-2.htm',{})
+		<section class="breadcrumbs">
+			<div class="breadcrumbs__container">
+				<div class="breadcrumbs__list">
+					<div class="breadcrumbs__item">
+						<a href="#">Главная</a>
+					</div>
+					<div class="breadcrumbs__item">
+						<a href="#">Каталог товаров</a>
+					</div>
+					<div class="breadcrumbs__item">
+						<a href="#">Наличники и плинтусы</a>
+					</div>
+					<div class="breadcrumbs__item">
+						<p>Наличники</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<main class="page">
+			
+			<div class="page__container">
+				<h1 class="page__title">Деревянные наличники 70 мм</h1>
+				<div class="page__wrap">
+					<div class="page__content">
+						
+					</div>
+					<div class="page__sidebar sidebar" data-sticky>
+						<div class="sidebar__wrap" data-sticky-item>
+							<ul class="sidebar__list"></ul>
+						</div>
+					</div>
+				</div>
+         </div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

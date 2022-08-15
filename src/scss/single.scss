@@ -1,27 +1,65 @@
 
 .page {
+    
+}
+
+.product__page{
     background: url(../img/product-page-bg.png) no-repeat 0 100%/contain;
     padding-bottom: 500px;
+    position: relative;
+
+    @media (max-width:$mobile) {
+        padding-bottom: 100px;
+    }
 }
 .page__container {
 }
 .page__title {
     font-size: rem(55);
+
+    @media (max-width:$tablet) {
+        font-size: rem(35);
+    }
+    @media (max-width:$mobile) {
+        font-size: rem(28);
+        line-height: rem(38);
+    }
+
 }
 .page__wrap {
     display: flex;
     align-items: start;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
 }
 .page__content {
     padding-left: 45px;
     flex: 1 0 0%;
     order: 2;
+
+    @media (max-width: $tablet) {
+        order: 1;
+        padding-left: 0;
+
+        .section__title{
+            font-size: rem(34);
+         }
+    }
+
+    @media (max-width:$mobile) {
+        .section__title{
+           font-size: rem(26);
+            line-height: rem(34);
+            margin-bottom: rem(30);
+        }
+        
+    }
 }
 
 
 
-.product__info {
-}
 .product__info-price {
     margin-bottom: rem(55);
     .price__item {
@@ -40,6 +78,29 @@
             font-size: rem(32);
             font-weight: 700;
         }
+
+        @media (max-width: 1028px) {
+            p{
+                font-size: rem(20);
+                margin-right: rem(15);
+            }
+            .summa{
+                font-size: rem(28);
+                font-weight: 700;
+            }
+        }
+        @media (max-width: 620px) {
+            flex-wrap: wrap;
+            margin-bottom: rem(20);
+            p{
+                font-size: rem(16);
+                margin-right: rem(10);
+            }
+            .summa{
+                font-size: rem(22);
+                font-weight: 700;
+            }
+        }
     }
 }
 
@@ -48,21 +109,47 @@
 .product__info-characteristics {
     display: flex;
     margin-bottom: rem(84);
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+    }
 }
 .characteristics__image {
     max-width: rem(447);
     margin-right: rem(25);
     img{
         width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: $tablet) {
+        max-width: 100%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    @media (max-width: $mobile) {
+        margin-bottom: rem(30);
+        margin-right: 0;
     }
 }
 .characteristics {
     width: rem((500));
+    @media (max-width: 1260px) {
+        width: 100%;
+    }
 }
 .characteristics__title {
     font-size: rem(22);
     font-weight: 700;
     margin-bottom: rem(24);
+
+    @media (max-width: 500px) {
+        font-size: rem(18);
+    }
 }
 .characteristics__list {
     
@@ -89,10 +176,20 @@
         border-bottom: 1px dashed #A3A3A3;
         bottom: 5px;
     }
+
+    @media (max-width: 500px) {
+        p{
+            font-size: rem(16);
+        }
+    }
 }
 .characteristics__item-right {
     text-align: left;
     flex-basis: 40%;
+
+    @media (max-width: 1200px) {
+        flex-basis: auto;
+    }
 }
 
 
@@ -116,17 +213,52 @@
             text-decoration: underline;
         }
     }
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        margin-bottom: rem(60);
+
+        span{
+            font-size: rem(22);
+        }
+    }
 }
 
 
 
 
 .page__content-text {
+    margin-bottom: rem(80);
     p{
         font-size: rem(22);
         line-height: rem(35);
         color: $grey;
         margin-bottom: rem(47);
+    }
+
+    a{
+        font-size: rem(20);
+        color: $green;
+        border-bottom: 1px dashed $green;
+    }
+
+    &__wrap{
+        max-height: 300px;
+        // min-height: 300px;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+
+        &.show{
+            max-height: 1500px;
+            transition: max-height 0.5s ease-in;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        margin-bottom: rem(30);
+        p{
+            font-size: rem(18);
+            line-height: rem(30);
+        }
     }
 }
 
@@ -139,7 +271,7 @@
 }
 .additional__services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(calc(100% / 3 - 24px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 24px;
 }
 .additional__services-item {
@@ -158,6 +290,15 @@
     .btn{
         min-width: rem(200);
         margin-top: auto;
+        display: block;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 25px;
+        align-items: center;
+        p{
+            font-size: rem(16);
+        }
     }
 }
 
@@ -175,6 +316,20 @@
         max-width: rem(370);
         bottom: -100px;
     }
+
+    @media (max-width: $tablet) {
+        margin-bottom: rem(50);
+        &-text{
+            margin-left: 0;
+            max-width: 100%;
+        }
+        .text__brown{
+            position: relative;
+            bottom: 0;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
 }
 
 
@@ -183,6 +338,10 @@
 .page__sidebar {
     width: 300px;
     order: 1;
+    @media (max-width: $tablet) {
+        order: 2;
+        width: 100%;
+    }
 }
 .sidebar__wrap {
     padding: 32px 30px;
@@ -205,10 +364,16 @@
     }
 }
 
-
+.page__labels{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 550px;
+}
 .page__label{
-    position: relative;
-    display: flex;
+    position: absolute;
+    display: inline-flex;
     width: 2.8125rem;
     justify-content: center;
     align-items: center;
@@ -217,17 +382,21 @@
     border: 2px solid $green;
     cursor: pointer;
 
+    @media (max-width:1200px) {
+        display: none;
+    }
+
     &.label-1{
-        top: 30px;
-        left: 240px;
+        left: 10%;
+        @include adaptiveValue("top", 0, 180, 1920, 1200);
     }
     &.label-2{
-        top: 150px;
-        left: 340px;
+        left: 16%;
+        @include adaptiveValue("top", 150, 270, 1920, 1200);
     }
     &.label-3{
-        bottom: -440px;
-        left: 820px;
+        left: 39%;
+        @include adaptiveValue("bottom", 60, 20, 1920, 1200);
     }
 
     &::before{

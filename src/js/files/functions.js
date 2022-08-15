@@ -671,3 +671,7 @@ itemParent.forEach(elem => {
 document.querySelector('.header__bottom-nav').addEventListener('click', event => {
 	document.querySelector('.header__bottom-catalog').classList.toggle('show');
 })
+document.querySelector('#show-text').addEventListener('click', event => {
+	event.preventDefault();
+	document.querySelector('.page__content-text__wrap').classList.toggle('show');
+})

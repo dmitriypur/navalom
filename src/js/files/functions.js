@@ -693,4 +693,7 @@ function addShowStyle(selector1, selector2, text = false) {
 }
 
 addShowStyle(headerBottomNav, headerBottomCatalog);
-addShowStyle(showTextLink, textContent, true);
+
+if (textContent) {
+	addShowStyle(showTextLink, textContent, true);
+}

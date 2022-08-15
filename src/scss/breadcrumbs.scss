@@ -1,0 +1,35 @@
+.breadcrumbs {
+   padding: 55px 0;
+
+   @media (max-width: $mobile) {
+		display: none;
+	}
+}
+.breadcrumbs__list {
+   display: flex;
+   align-items: center;
+}
+.breadcrumbs__item {
+   margin-right: rem(20);
+   font-size: rem(14);
+      color: #A7A7A7;
+
+   a{
+      
+      text-decoration: underline;
+      position: relative;
+
+      &::before{
+         content: '';
+         position: absolute;
+         right: -17px;
+         top: 50%;
+         width: 14px;
+         height: 1px;
+         background: #A7A7A7;
+      }
+   }
+   &:last-child{
+      margin-right: 0;
+   }
+}

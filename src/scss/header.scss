@@ -20,6 +20,18 @@
 .header {
 	background: url(@img/hero-bg.jpg) no-repeat center/cover;
 }
+.header-2{
+	background: url(@img/header-page.jpg) no-repeat center/cover;
+
+	@media (min-width: 1200px) {
+		padding-bottom: 45px;
+	}
+	@media (max-width: $mobile) {
+		.header__bottom-left{
+			padding-bottom: 45px;
+		}
+	}
+}
 .header__container{
 	@media (max-width: 1200px) {
 		padding: 0;
@@ -444,8 +456,7 @@ p.header__address {
 .swiper-button-prev {
 	right: 50px;
 }
-.swiper-button-next {
-}
+
 .hamburger,
 .hamburger__top {
 	position: relative;

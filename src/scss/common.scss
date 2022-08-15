@@ -20,6 +20,7 @@
     font-family: 'ProstoOne';
     font-size: rem(50);
     margin-bottom: rem(55);
+    line-height: rem(50);
 
     @media (max-width: $mobile) {
         font-size: rem(30);
@@ -66,5 +67,9 @@
         margin-bottom: rem(25);
         list-style: square outside;
         padding-left: 10px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
 }

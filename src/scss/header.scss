@@ -231,6 +231,10 @@
 			}
 			
 		}
+		.menu__item{
+			margin: 0;
+			margin-bottom: rem(24);
+		}
 
 		@media (max-width:1200px){
 			position: relative;
@@ -261,6 +265,13 @@
 		}
 		@media (max-width: 400px) {
 			width: 100%;
+		}
+	}
+	@media (min-width: 1200px) {
+		&:hover{
+			.sub-menu{
+				display: block;
+			}
 		}
 	}
 }

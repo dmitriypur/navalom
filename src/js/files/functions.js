@@ -668,10 +668,29 @@ itemParent.forEach(elem => {
 	})
 })
 
-document.querySelector('.header__bottom-nav').addEventListener('click', event => {
-	document.querySelector('.header__bottom-catalog').classList.toggle('show');
-})
-document.querySelector('#show-text').addEventListener('click', event => {
-	event.preventDefault();
-	document.querySelector('.page__content-text__wrap').classList.toggle('show');
-})
+let headerBottomNav = document.querySelector('.header__bottom-nav');
+let headerBottomCatalog = document.querySelector('.header__bottom-catalog')
+
+let showTextLink = document.querySelector('#show-text');
+let textContent = document.querySelector('.page__content-text__wrap');
+
+function addShowStyle(selector1, selector2, text = false) {
+	selector1.addEventListener('click', event => {
+		event.preventDefault();
+		if (selector2.classList.contains('show')) {
+			selector2.classList.remove('show');
+			if (text) {
+				selector1.innerText = 'Читать полностью'
+			}
+		} else {
+			selector2.classList.add('show');
+			if (text) {
+				selector1.innerText = 'Скрыть текст'
+			}
+		}
+		// selector2.classList.toggle('show');
+	})
+}
+
+addShowStyle(headerBottomNav, headerBottomCatalog);
+addShowStyle(showTextLink, textContent, true);

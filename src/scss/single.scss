@@ -181,12 +181,13 @@
 
 
 .page__sidebar {
-    padding: 32px 30px;
-    background: #EFECF0;
     width: 300px;
     order: 1;
 }
 .sidebar__wrap {
+    padding: 32px 30px;
+    background: #EFECF0;
+    width: 100%;
 }
 .sidebar__list {
 }

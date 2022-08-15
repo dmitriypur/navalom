@@ -1,6 +1,6 @@
-import stickyBlock from 'sticky-sidebar';
+import StickySidebar from 'sticky-sidebar';
 
-var sidebar = new StickySidebar('#sidebar', {
+var sidebar = new StickySidebar('.sidebar', {
    containerSelector: '.page__wrap',
    innerWrapperSelector: '.sidebar__wrap',
    topSpacing: 20,

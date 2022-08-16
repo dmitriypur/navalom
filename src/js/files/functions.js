@@ -685,11 +685,13 @@ function addShowStyle(selector1, selector2, text = false) {
 			selector2.classList.remove('show');
 			if (text) {
 				selector1.innerText = 'Читать полностью'
+				selector1.removeAttribute('style')
 			}
 		} else {
 			selector2.classList.add('show');
 			if (text) {
 				selector1.innerText = 'Скрыть текст'
+				selector1.style.marginTop = 0
 			}
 		}
 		// selector2.classList.toggle('show');

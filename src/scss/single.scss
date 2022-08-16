@@ -282,6 +282,8 @@
         font-size: rem(20);
         color: $green;
         border-bottom: 1px dashed $green;
+        display: inline-block;
+        margin-top: rem(20);
     }
 
     &__wrap{

@@ -40,7 +40,8 @@
          z-index: 2;
       }
 
-      img{
+      img,
+      picture{
          margin-right: rem(35);
          height: 100%;
          width: auto;
@@ -52,7 +53,8 @@
          padding-bottom: 20px;
          padding-right: 0;
 
-         img{
+         img,
+         picture{
             margin-right: auto;
             margin-bottom: 10px;
             width: 70%;

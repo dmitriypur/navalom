@@ -40,6 +40,7 @@
 .header__top {
 	background: $white;
 	display: flex;
+	align-items: center;
 	padding: 30px 80px;
 	margin-bottom: rem(60);
 
@@ -53,8 +54,8 @@
 	}
 }
 .header__top-logo {
-	margin-right: rem(20);
-	@include adaptiveValue("margin-right", 100, 20, 1400, 1200);
+	margin-right: rem(80);
+	@include adaptiveValue("margin-right", 80, 20, 1440, 1200);
 
 	svg{
 		width: rem(220);
@@ -69,6 +70,9 @@
 		svg{
 			display: block;
 		}
+	}
+	@media (max-width: 1200px) {
+		margin-right: 0;
 	}
 	
 }
@@ -165,13 +169,16 @@
 .menu__item{
 	margin-left: rem(20);
 	flex: 1 1 auto;
-	padding: 25px 0;
+	
 	&:first-child{
 		margin-left: 0;
 	}
 
 	@media (max-width:1200px){
 		margin-left: 0;
+	}
+	@media (min-width:1200px){
+		padding: 25px 0;
 	}
 }
 .menu__item.menu-item-has-children {
@@ -181,6 +188,7 @@
 		position: absolute;
 		top: 50%;
 		right: 30px;
+		@include adaptiveValue("right", 30, -30, 1440, 1200);
 		width: 12px;
 		height: 12px;
 		background: url(@img/arrow-down.svg) no-repeat center;

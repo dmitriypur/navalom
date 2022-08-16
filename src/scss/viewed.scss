@@ -39,7 +39,8 @@
 .viewed__card {
    width: 100%;
    background: $white;
-   img{
+   img,
+   picture{
       margin-bottom: rem(35);
       width: 100%;
       height: auto;

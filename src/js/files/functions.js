@@ -640,11 +640,15 @@ export function dataMediaQueries(array, dataSetValue) {
 
 document.querySelector('.hamburger-js').addEventListener('click', e => {
 	document.querySelector('.header__top-info').classList.add('show');
+	document.querySelector('.header__top-substrate').classList.add('show');
 	document.querySelector("html").classList.add('lock')
-	console.log(document.getElementsByTagName("html"));
-	document.querySelector('.header__top-info .close-orange').addEventListener('click', e => {
-		document.querySelector('.header__top-info').classList.remove('show');
-		document.querySelector("html").classList.remove('lock')
+	document.querySelector('.header').addEventListener('click', e => {
+
+		if(e.target.classList.contains('close-js')){
+			document.querySelector('.header__top-info').classList.remove('show');
+			document.querySelector('.header__top-substrate').classList.remove('show');
+			document.querySelector("html").classList.remove('lock')
+		}
 	})
 })
 

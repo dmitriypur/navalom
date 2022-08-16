@@ -93,6 +93,9 @@ body::after {
 		flex-wrap: wrap;
 		max-width: rem(600);
 		gap: 25px 20px;
+		@media (max-width: $mobile) {
+			max-width: 100%;
+		}
 	}
 	.form-control{
 		width: calc(100% / 2 - 20px);
@@ -138,6 +141,13 @@ body::after {
 	align-items: center;
 	font-size: rem(20);
 
+	&-item{
+		margin-bottom: rem(35);
+	}
+	&-mail{
+		color: $green;
+	}
+
 	p{
 		margin-bottom: rem(7);
 	}
@@ -151,9 +161,16 @@ body::after {
 	}
 
 	@media (max-width: $mobile) {
-		font-size: rem(18);
+		font-size: rem(16);
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 20px;
 		a{
 			margin-bottom: rem(30);
+		}
+		&-item{
+			margin: 0 rem(5) rem(20);
 		}
 	}
 }

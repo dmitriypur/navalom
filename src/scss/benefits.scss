@@ -38,7 +38,7 @@
         line-height: rem(29);
     }
 
-    @media (max-width: 991px) {
+    @media (max-width: $tablet) {
         width: calc(100% / 2 - 20px);
         margin-bottom: rem(40);
 

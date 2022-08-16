@@ -8,7 +8,7 @@
     padding-bottom: 500px;
     position: relative;
 
-    @media (max-width:$mobile) {
+    @media (max-width:$tablet) {
         padding-bottom: 100px;
     }
 }
@@ -111,6 +111,7 @@
     margin-bottom: rem(84);
 
     @media (max-width: $mobile) {
+        flex-wrap: wrap;
         flex-direction: column;
     }
 }
@@ -120,11 +121,12 @@
     img,
     picture{
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
     }
 
     @media (max-width: $tablet) {
-        max-width: 100%;
+        flex: 1 0 0%;
 
         img,
         picture{
@@ -134,6 +136,8 @@
         }
     }
     @media (max-width: $mobile) {
+        max-width: 100%;
+        width: 100%;
         margin-bottom: rem(30);
         margin-right: 0;
     }
@@ -141,6 +145,16 @@
 .characteristics {
     width: rem((500));
     @media (max-width: 1260px) {
+        width: 100%;
+    }
+    @media (max-width: $tablet) {
+        width: 50%;
+    }
+    @media (max-width: 991.98px) {
+        flex-basis: 56%;
+    }
+    @media (max-width: $mobile) {
+        flex-basis: 100%;
         width: 100%;
     }
 }
@@ -153,9 +167,7 @@
         font-size: rem(18);
     }
 }
-.characteristics__list {
-    
-}
+
 .characteristics__item {
     display: flex;
     align-items: center;
@@ -192,6 +204,16 @@
     @media (max-width: 1200px) {
         flex-basis: auto;
     }
+
+    @media (max-width: 1023.98px) {
+        flex-basis: 45%;
+    }
+    // @media (max-width: 991.98px) {
+    //     flex-basis: 50%;
+    // }
+    @media (max-width: 360px) {
+        flex-basis: auto;
+    }
 }
 
 
@@ -213,6 +235,25 @@
         &-mail{
             color: $green;
             text-decoration: underline;
+        }
+        &-item{
+            margin-bottom: rem(35);
+        }
+
+        @media (max-width: $mobile) {
+            font-size: rem(16);
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: start;
+            padding: 20px;
+            a{
+                margin-bottom: rem(30);
+                font-size: rem(16);
+            }
+            &-item{
+                margin: 0 rem(5) rem(20);
+            }
         }
     }
     @media (max-width: $mobile) {
@@ -275,6 +316,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 24px;
+
+    @media (max-width: 560px){
+        grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+        gap: 20px;
+    }
+    @media (max-width: 390px){
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
 }
 .additional__services-item {
     background: #EFECF0;
@@ -298,8 +347,18 @@
     @media (max-width: $mobile) {
         padding: 25px;
         align-items: center;
+        position: relative;
         p{
             font-size: rem(16);
+            margin-bottom: rem(60);
+        }
+        .btn{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            max-width: 100%;
+            min-width: unset;
         }
     }
 }
@@ -341,8 +400,7 @@
     width: 300px;
     order: 1;
     @media (max-width: $tablet) {
-        order: 2;
-        width: 100%;
+        display: none;
     }
 }
 .sidebar__wrap {
@@ -372,6 +430,9 @@
     left: 0;
     width: 100%;
     height: 550px;
+    @media (max-width: $tablet) {
+        display: none;
+    }
 }
 .page__label{
     position: absolute;
@@ -384,21 +445,21 @@
     border: 2px solid $green;
     cursor: pointer;
 
-    @media (max-width:1200px) {
+    @media (max-width:1024px) {
         display: none;
     }
 
     &.label-1{
         left: 10%;
-        @include adaptiveValue("top", 0, 180, 1920, 1200);
+        @include adaptiveValue("top", 0, 230, 1920, 1024);
     }
     &.label-2{
         left: 16%;
-        @include adaptiveValue("top", 150, 270, 1920, 1200);
+        @include adaptiveValue("top", 150, 310, 1920, 1024);
     }
     &.label-3{
         left: 39%;
-        @include adaptiveValue("bottom", 60, 20, 1920, 1200);
+        @include adaptiveValue("bottom", 60, 20, 1920, 1024);
     }
 
     &::before{

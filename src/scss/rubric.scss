@@ -1,0 +1,75 @@
+.page__content {
+   .rubric__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px 24px;
+      margin-bottom: rem(30);
+
+      @media (max-width: $mobile) {
+         gap: 40px 15px;
+      }
+   }
+
+   .viewed__card-title {
+      @media (max-width: $tablet) {
+         font-size: rem(22);
+         font-weight: 500;
+         margin-bottom: rem(20);
+      }
+   }
+   .viewed__card-sum {
+      @media (max-width: $tablet) {
+         font-size: rem(24);
+         margin-right: rem(10);
+      }
+      
+   }
+   .btn-show__more {
+      text-align: center;
+      border: 1px solid $grey;
+      color: $grey;
+      padding: 17px;
+      width: 100%;
+      margin-bottom: rem(70);
+
+      @media (min-width: $mobile) {
+         display: none;
+      }
+   }
+}
+.page__container{
+   
+   .viewed-inner{
+      margin-left: rem(330);
+      width: 100%;
+      flex-basis: 100%;
+      order: 3;
+      @media (max-width: $pc) {
+         .section__title{
+            font-size: rem(40);
+         }
+      }
+      @media (max-width: $tablet) {
+         margin-left: 0;
+         .section__title{
+            font-size: rem(50);
+         }
+      }
+      @media (max-width: $mobile) {
+         margin-left: 0;
+         .section__title{
+            font-size: rem(30);
+            line-height: rem(36);
+         }
+      }
+   }
+   .viewed__container .swiper-button{
+      top: 200px;
+   }
+   .viewed__container .swiper-button-prev{
+      left: 330px;
+      @media (max-width: $tablet) {
+         left: 0;
+      }
+   }
+}

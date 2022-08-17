@@ -182,9 +182,10 @@
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      gap: rem(15);
    }
    .catalog__item {
+      margin-right: rem(15);
+      margin-bottom: rem(15);
       a{
          display: inline-block;
          font-size: rem(20);

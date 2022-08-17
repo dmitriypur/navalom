@@ -403,6 +403,7 @@
 .page__sidebar {
     width: 300px;
     order: 1;
+    will-change: min-height;
     @media (max-width: $tablet) {
         display: none;
     }
@@ -411,6 +412,9 @@
     padding: 32px 30px;
     background: #EFECF0;
     width: 100%;
+    transform: translate(0, 0); /* For browsers don't support translate3d. */
+    transform: translate3d(0, 0, 0);
+    will-change: position, transform;
 }
 .sidebar__item{
     width: 100%;

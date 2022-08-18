@@ -115,7 +115,7 @@
 		top: 0;
 		left: -100%;
 		overflow-y: scroll;
-		max-width: max-content;
+		max-width: 400px;
 		height: 100%;
 		padding: 140px 30px 40px;
 		background: $white;
@@ -133,6 +133,9 @@
 			width: rem(30);
 			height: rem(30);
 		}
+	}
+	@media (max-width: 767.98px){
+		max-width: 320px;
 	}
 	@media (max-width: 400px){
 		padding: 70px 20px 30px;

@@ -644,7 +644,7 @@ document.querySelector('.hamburger-js').addEventListener('click', e => {
 	document.querySelector("html").classList.add('lock')
 	document.querySelector('.header').addEventListener('click', e => {
 
-		if(e.target.classList.contains('close-js')){
+		if (e.target.classList.contains('close-js')) {
 			document.querySelector('.header__top-info').classList.remove('show');
 			document.querySelector('.header__top-substrate').classList.remove('show');
 			document.querySelector("html").classList.remove('lock')
@@ -663,7 +663,7 @@ itemParent.forEach(elem => {
 			// elem.classList.add('parent')
 			if (window.innerWidth < 1200) {
 				elem.addEventListener('click', function (e) {
-					e.preventDefault()
+					// e.preventDefault()
 					elem.classList.toggle('show')
 					el.classList.toggle('show')
 				});

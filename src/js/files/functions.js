@@ -679,23 +679,27 @@ let showTextLink = document.querySelector('#show-text');
 let textContent = document.querySelector('.page__content-text__wrap');
 
 function addShowStyle(selector1, selector2, text = false) {
-	selector1.addEventListener('click', event => {
-		event.preventDefault();
-		if (selector2.classList.contains('show')) {
-			selector2.classList.remove('show');
-			if (text) {
-				selector1.innerText = 'Читать полностью'
-				selector1.removeAttribute('style')
+
+	if(selector1){
+		selector1.addEventListener('click', event => {
+			event.preventDefault();
+			if (selector2.classList.contains('show')) {
+				selector2.classList.remove('show');
+				if (text) {
+					selector1.innerText = 'Читать полностью'
+					selector1.removeAttribute('style')
+				}
+			} else {
+				selector2.classList.add('show');
+				if (text) {
+					selector1.innerText = 'Скрыть текст'
+					selector1.style.marginTop = 0
+				}
 			}
-		} else {
-			selector2.classList.add('show');
-			if (text) {
-				selector1.innerText = 'Скрыть текст'
-				selector1.style.marginTop = 0
-			}
-		}
-		// selector2.classList.toggle('show');
-	})
+			// selector2.classList.toggle('show');
+		})
+	}
+	
 }
 
 addShowStyle(headerBottomNav, headerBottomCatalog);

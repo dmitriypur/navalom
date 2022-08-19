@@ -1,0 +1,77 @@
+
+.payment__page {
+   h2.section__title{
+      font-size: rem(40);
+      margin-bottom: rem(50);
+   }
+}
+.spollers {
+   margin-bottom: rem(50);
+}
+.spollers__item {
+   padding: 35px 0;
+   border-bottom: 1px solid #CFCCCF;
+
+   &:last-child{
+      border-bottom: none;
+   }
+}
+.spollers__title {
+   font-size: rem(22);
+   font-weight: 700;
+   text-align: left;
+   color: #2D2D2D;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+
+   svg{
+      width: rem(30);
+      min-width: rem(30);
+      height: rem(30);
+      transition: transform 0.4s ease-in-out;
+      @media (max-width: $mobile) {
+         width: rem(20);
+         min-width: rem(20);
+         height: rem(20);
+      }
+   }
+
+   &._spoller-active{
+      color: $green;
+
+      svg{
+         transform: rotate(225deg);
+      }
+   }
+}
+
+.spollers__body {
+   padding-top: 30px;
+   font-size: rem(22);
+   line-height: rem(28);
+   color: #2D2D2D;
+
+   @media (max-width: $tablet) {
+      font-size: rem(16);
+      line-height: rem(22);
+   }
+   @media (max-width: $mobile) {
+      font-size: rem(18);
+      line-height: rem(35);
+   }
+}
+.form__order {
+}
+.popup__form {
+}
+.btn-orange {
+   @include btn($orange, 5%);
+   margin-top: rem(30);
+   width: rem(290);
+}
+.popup__phones {
+}
+.popup__phones-item {
+}

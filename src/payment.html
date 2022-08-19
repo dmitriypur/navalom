@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Страница товара"
+})
+
+<body>
+	<div class="wrapper">
+		<div class="top__info">
+			<p>Закажи пиломатериал по телефону сейчас, а плати при получении! Звони: +7 (8332) 43-05-43</p>
+		</div>
+		@@include('html/_header-2.htm',{})
+		<section class="breadcrumbs">
+			<div class="breadcrumbs__container">
+				<div class="breadcrumbs__list">
+					<div class="breadcrumbs__item">
+						<a href="#">Главная</a>
+					</div>
+					<div class="breadcrumbs__item">
+						<a href="#">Каталог товаров</a>
+					</div>
+					<div class="breadcrumbs__item">
+						<a href="#">Наличники и плинтусы</a>
+					</div>
+					<div class="breadcrumbs__item">
+						<p>Наличники</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<main class="page payment__page page__nosidebar">
+			<div class="page__container">
+				<h1 class="page__title section__title">Доставка и оплата</h1>
+				<div class="page__wrap">
+					<article class="page__content">
+						<div class="page__content-text">
+                     <h2 class="section__title">Варианты доставки</h2>
+                     <p>Возможна доставка пиломатериала до пункта назначения в соответствии с гарантией сохранности груза.
+                        Срок доставки груза может быть увеличен в случае, если заказанные сорта древесины не произрастают в Волго-Вятском регионе.
+                        Стоимость зависит от вашей удаленности от склада.</p>
+						
+                     <div class="page__content-card">
+                        <div class="brown__card" style="background-image: url(@img/catalog-item.jpg);">
+                           <p class="brown__card-text">Доставка автомобильным транспортом</p>
+                           <p class="brown__card-price">от 800 руб/час</p>
+                        </div>
+                        <div class="brown__card" style="background-image: url(@img/catalog-item.jpg);">
+                           <p class="brown__card-text">Доставка в дальные районы</p>
+                           <p class="brown__card-price">от 1000 руб/час</p>
+                        </div>
+                        <div class="brown__card" style="background-image: url(@img/catalog-item.jpg);">
+                           <p class="brown__card-text">Доставка за город</p>
+                           <p class="brown__card-price">от 1500 руб/час</p>
+                        </div>
+                        <div class="brown__card" style="background-image: url(@img/catalog-item.jpg);">
+                           <p class="brown__card-text">Доставка железнодорожным транспортом</p>
+                           <p class="brown__card-price">от 2000 руб/час</p>
+                        </div>
+                     </div>
+							<p>Условия доставка железнодорожным транспортом зависят от объёмов и сроков доставки.</p>
+                     <div data-spollers class="spollers">
+                        <div class="spollers__item">
+                           <button type="button" data-spoller class="spollers__title">
+                              По банковским реквизитам
+                              <svg class="spoiler-ico">
+                                 <use xlink:href="@img/icons/icons.svg#svg-spoiler-ico"></use>
+                              </svg>
+                           </button>
+                           <div class="spollers__body">При покупке в розницу или оптом для частных лиц выдаются все соответствующие
+                              документы по оплате: чек, накладная при необходимости предоставляется полный пакет документов, (счёт-фактура,
+                              приходный кассовый ордер. и т.д), оплата наличными на складе.
+                              Оплата производится в рублях.</div>
+                        </div>
+                        <div class="spollers__item">
+                           <button type="button" data-spoller class="spollers__title">
+                              На месте (наличный и безналичный расчёт
+                              <svg class="spoiler-ico">
+                                 <use xlink:href="@img/icons/icons.svg#svg-spoiler-ico"></use>
+                              </svg>
+                           </button>
+                           <div class="spollers__body">При покупке в розницу или оптом для частных лиц выдаются все соответствующие
+                              документы по оплате: чек, накладная при необходимости предоставляется полный пакет документов, (счёт-фактура,
+                              приходный кассовый ордер. и т.д), оплата наличными на складе.
+                              Оплата производится в рублях.</div>
+                        </div>
+                     </div>
+                     <h2 class="section__title">Варианты оплаты</h2>
+                     <p>Компания работает как с розничными покупателями, так и с оптовиками, предлагая различные варианты оплаты товара:</p>
+                     <div data-spollers class="spollers">
+                        <div class="spollers__item">
+                           <button type="button" data-spoller class="spollers__title">
+                              По банковским реквизитам
+                              <svg class="spoiler-ico">
+                                 <use xlink:href="@img/icons/icons.svg#svg-spoiler-ico"></use>
+                              </svg>
+                           </button>
+                           <div class="spollers__body">При покупке в розницу или оптом для частных лиц выдаются все соответствующие
+                              документы по оплате: чек, накладная при необходимости предоставляется полный пакет документов, (счёт-фактура,
+                              приходный кассовый ордер. и т.д), оплата наличными на складе.
+                              Оплата производится в рублях.</div>
+                        </div>
+                        <div class="spollers__item">
+                           <button type="button" data-spoller class="spollers__title">
+                              На месте (наличный и безналичный расчёт
+                              <svg class="spoiler-ico">
+                                 <use xlink:href="@img/icons/icons.svg#svg-spoiler-ico"></use>
+                              </svg>
+                           </button>
+                           <div class="spollers__body">При покупке в розницу или оптом для частных лиц выдаются все соответствующие
+                              документы по оплате: чек, накладная при необходимости предоставляется полный пакет документов, (счёт-фактура,
+                              приходный кассовый ордер. и т.д), оплата наличными на складе.
+                              Оплата производится в рублях.</div>
+                        </div>
+                     </div>
+						</div>
+					</article>
+				</div>
+            <div class="form__order">
+               <div class="popup__form">
+                  <span>Закажите товар, оставив контакты</span>
+                  <p>Для уточнения стоимости свяжитесь с нами по указанным телефонам или воспользуйтесь формой обратной связи:</p>
+                  <button type="button" data-popup="#popup" class="btn btn-orange">Заказать звонок</button>
+               </div>
+               <div class="popup__phones">
+                  <div class="popup__phones-item">
+                     <p>Розничные продажи</p>
+                     <a href="tel:88332430543">+7 8332 43-05-43</a>
+                  </div>
+                  <div class="popup__phones-item">
+                     <p>Оптовый отдел</p>
+                     <a href="tel:88332477233">+7 8332 47-72-33</a>
+                  </div>
+               </div>
+            </div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

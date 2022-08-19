@@ -20,7 +20,7 @@ $fontSize: rem(16); // где 14(px) - размер шрифта по умолч
 // Основные цвета
 $mainColor: #000; // Цвет шрифта по умолчанию
 $text: #2D2D2D;
-$title: #7B3F2B;
+$brown: #7B3F2B;
 $green: #447B46;
 $orange: #FF784B;
 $white: #ffffff;
@@ -146,6 +146,9 @@ body {
 @import "catalog";
 @import "rubric";
 @import "price";
+@import "about-page";
+@import "payment";
+@import "purchase";
 @import "footer";
 
 // Подключение стилей отдельных страниц

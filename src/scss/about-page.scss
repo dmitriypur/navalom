@@ -1,7 +1,7 @@
 
-.about__page {
+.about__page,
+.purchase__page {
    .page__container {
-
       .viewed-inner {
          margin: 0;
          width: 120%;
@@ -27,8 +27,7 @@
                right: 0;
             }
          }
-         .swiper-button-next {
-         }
+
       }
       
    }

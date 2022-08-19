@@ -1,0 +1,17 @@
+
+.purchase__page {
+   .form__order {
+      max-width: rem(1149);
+   }
+   .popup__phones{
+      background: $green;
+   }
+   .btn-orange {
+      margin-top: auto;
+      max-width: rem(290);
+
+      @media (max-width: $tablet) {
+         width: 100%;
+      }
+   }
+}

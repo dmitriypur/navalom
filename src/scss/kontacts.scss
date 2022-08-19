@@ -1,0 +1,139 @@
+
+.kontacts__block {
+   display: flex;
+   margin-bottom: rem(65);
+
+   @media (max-width: $mobile) {
+      display: none;
+   }
+}
+.kontacts__block-item {
+   max-width: rem(550);
+   width: 100%;
+   margin-right: rem(20);
+
+   &:last-child{
+      margin-right: 0;
+   }
+
+}
+.kontact__info-box{
+   text-align: left;
+}
+.kontacts__title {
+   font-size: rem(40);
+   line-height: rem(46);
+   margin-bottom: rem(30);
+
+   @media (max-width: $tablet) {
+      margin-bottom: rem(22);
+      line-height: rem(30);
+   }
+}
+
+.kontact__info-text {
+   font-size: rem(22);
+   line-height: rem(35);
+   a{
+      color: #2D2D2D;
+      margin-right: rem(30);
+   }
+   span{
+      color: $grey;
+   }
+
+   @media (max-width: $tablet) {
+      font-size: rem(16);
+      line-height: rem(30);
+
+      a{
+         margin-right: rem(15);
+      }
+   }
+}
+
+.kontacts__block-mobile {
+   display: none;
+   .kontacts__block-item {
+      margin: 0;
+      margin-bottom: rem(30);
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+   }
+   .kontact__info-box {
+      flex-basis: 50%;
+      margin-left: rem(20);
+      min-width: 50%;
+   }
+   .kontact__info-text {
+      margin-bottom: rem(20);
+      span, a{
+         display: block;
+         line-height: rem(20);
+      }
+   }
+   .address {
+   }
+}
+@media (max-width: $mobile) {
+   .kontacts__block-mobile{
+      display: block;
+
+      .kontacts__title {
+         font-size: rem(22);
+         line-height: rem(28);
+      }
+   }
+}
+
+.map {
+   margin-bottom: rem(70);
+   position: relative;
+
+   img{
+      width: 100%;
+   }
+
+   .kontacts__block-map{
+      position: absolute;
+      top: 60px;
+      left: 50px;
+      background: $white;
+      max-width: rem(482);
+      padding: 65px 60px;
+
+      img{
+         min-height: 320px;
+      }
+      
+      .kontact__info-text{
+         span{
+            display: block;
+         }
+      }
+
+      @media (max-width: $tablet) {
+         top: 40px;
+         left: 40px;
+         padding: 30px;
+
+         .kontacts__title{
+            font-size: rem(22);
+         }
+      }
+   }
+
+   @media (max-width: $mobile) {
+      width: 110%;
+      margin-left: -15px;
+      img{
+         min-height: 300px;
+         object-fit: cover;
+      }
+
+      .kontacts__block-map{
+         display: none;
+      }
+   }
+}

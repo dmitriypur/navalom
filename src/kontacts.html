@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Страница товара"
+})
+
+<body>
+	<div class="wrapper">
+		<div class="top__info">
+			<p>Закажи пиломатериал по телефону сейчас, а плати при получении! Звони: +7 (8332) 43-05-43</p>
+		</div>
+		@@include('html/_header-2.htm',{})
+		<section class="breadcrumbs">
+			<div class="breadcrumbs__container">
+				<div class="breadcrumbs__list">
+					<div class="breadcrumbs__item">
+						<a href="#">Главная</a>
+					</div>
+					<div class="breadcrumbs__item">
+						<a href="#">Каталог товаров</a>
+					</div>
+					<div class="breadcrumbs__item">
+						<a href="#">Наличники и плинтусы</a>
+					</div>
+					<div class="breadcrumbs__item">
+						<p>Наличники</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<main class="page kontact__page page__nosidebar">
+			<div class="page__container">
+				<h1 class="page__title section__title">Контакты</h1>
+				<div class="page__wrap">
+					<article class="page__content">
+						<div class="kontacts__block">
+                     <div class="kontacts__block-item">
+                        <p class="kontacts__title section__title">Телефон</p>
+                        <div class="kontact__info-box">
+                           <div class="kontact__info-text">
+                              <a href="tel:88332477233">+7 (8332) 47-72-33</a>
+                              <span>- оптовый отдел</span>
+                           </div>
+                           <div class="kontact__info-text">
+                              <a href="tel:88332430543">+7 (8332) 43-05-43</a>
+                              <span>- розничные продажи</span>
+                           </div>
+                           <div class="kontact__info-text">
+                              <a href="tel:88332477233">+7 (8332) 47-72-33</a>
+                              <span>- закупка материалов</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="kontacts__block-item">
+                        <p class="kontacts__title section__title">E-mail</p>
+                        <div class="kontact__info-box">
+                           <div class="kontact__info-text">
+                              <a href="mailto:477-233@mail.ru">477-233@mail.ru</a>
+                              <span> - опт и розница</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="kontacts__block-mobile">
+                     <div class="kontacts__block-item">
+                        <p class="kontacts__title section__title">Телефон</p>
+                        <div class="kontact__info-box">
+                           <div class="kontact__info-text">
+                              <span>Оптовый отдел</span>
+                              <a href="tel:88332477233">+7 (8332) 47-72-33</a>
+                           </div>
+                           <div class="kontact__info-text">
+                              <span>Розничные продажи</span>
+                              <a href="tel:88332430543">+7 (8332) 43-05-43</a>
+                           </div>
+                           <div class="kontact__info-text">
+                              <span>Закупка материалов</span>
+                              <a href="tel:88332477233">+7 (8332) 47-72-33</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="kontacts__block-item">
+                        <p class="kontacts__title section__title">E-mail</p>
+                        <div class="kontact__info-box">
+                           <div class="kontact__info-text">
+                              <span>Опт и розница</span>
+                              <a href="mailto:477-233@mail.ru">477-233@mail.ru</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="kontacts__block-item">
+                        <p class="kontacts__title section__title">Адрес склада</p>
+                        <div class="kontact__info-box">
+                           <div class="kontact__info-text">
+                              <p class="address">г. Киров, ул. Сормовская, д. 7</p>
+                              <span>пн-пт: с 9:00-18:00</span>
+                              <span>cб: 8:30-14:00</span>
+                              <span>вс: выходной</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="map">
+                     <div class="kontacts__block-map">
+                        <p class="kontacts__title section__title">Адрес склада</p>
+                        <div class="kontact__info-box">
+                           <div class="kontact__info-text">
+                              <p class="address">г. Киров, ул. Сормовская, д. 7</p>
+                              <span>пн-пт: с 9:00-18:00</span>
+                              <span>cб: 8:30-14:00</span>
+                              <span>вс: выходной</span>
+                           </div>
+                        </div>
+                     </div>
+                     <img src="@img/map-1.jpg" alt="">
+                  </div>
+                  <h2 class="section__title">Схема проезда</h2>
+                  <div class="map">
+                     <img src="@img/map-2.jpg" alt="">
+                  </div>
+                  <div class="form__order">
+							<div class="popup__form">
+								<span>Закажите товар, оставив контакты</span>
+								<p>Мы свяжемся с вами в ближайшее время и подтвердим заказ</p>
+								<form>
+									<div class="form-control">
+										<input type="text" name="name" placeholder="+7 999 999-99-99">
+									</div>
+									<div class="form-control">
+										<input type="text" name="phone" placeholder="Введите имя">
+									</div>
+									<div class="form-control">
+										<input type="submit" value="Отправить заявку">
+									</div>
+									<div class="form-control">
+										<p>Отправляя эту форму, вы соглашаетесь с политикой
+											конфидециальности
+										</p>
+									</div>
+								</form>
+							</div>
+							<div class="popup__phones">
+								<div class="popup__phones-item">
+									<p>Розничные продажи</p>
+									<a href="tel:88332430543">+7 8332 43-05-43</a>
+								</div>
+								<div class="popup__phones-item">
+									<p>Оптовый отдел</p>
+									<a href="tel:88332477233">+7 8332 47-72-33</a>
+								</div>
+								<a href="mailto:477–233@mail.ru" class="popup__phones-mail">477–233@mail.ru</a>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
